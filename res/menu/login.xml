@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="br.optimize.loja_virtual.LoginActivity" >
+
+    <item
+        android:id="@+id/menuSair"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/lbl_sair"/>
+    
+     <item
+        android:id="@+id/menuSobre"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/lbl_sobre"/>
+
+</menu>

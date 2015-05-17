@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Loja Virtual</string>
+    
+
+    <!-- Strings Login -->
+    <string name="lbl_login">Login:</string>
+    <string name="lbl_senha">Senha:</string>
+    <string name="lbl_logar">Entrar</string>
+    <string name="lbl_sair">Sair</string>
+    <string name="lbl_sobre">Sobre</string>
+    <string name="msg_sobre">Copyright 2015 | Rodrigo A. Pereira\nTodos os direitos reservados!</string>
+    <string name="msg_confirma_sair">Deseja realmene sair?</string>
+    
+    
+    <!-- Mensagens -->
+    
+    <string name="msg_login_obg">Login obrigatório!</string>
+    <string name="msg_senha_obg">Senha obrigatória!</string>
+    <string name="msg_login_sucesso">Logou com sucesso!</string>
+    
+     <!-- Globais -->
+    
+    <string name="lbl_listar">Listar</string>
+    <string name="lbl_pesquisar">Pesquisar</string>
+    
+
+</resources>
