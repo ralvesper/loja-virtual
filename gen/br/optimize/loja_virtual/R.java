@@ -31,6 +31,9 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
         public static final int logout=0x7f020004;
         public static final int search=0x7f020005;
+        public static final int search_click_img=0x7f020006;
+        public static final int search_clicked=0x7f020007;
+        public static final int text_click=0x7f020008;
     }
     public static final class id {
         public static final int btnListar=0x7f080000;

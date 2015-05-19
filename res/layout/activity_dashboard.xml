@@ -20,8 +20,10 @@
 
         <Button
             style="@style/BotaoDash"
-            android:drawableTop="@drawable/search"
-            android:text="@string/lbl_pesquisar" />
+            android:drawableTop="@drawable/search_click_img"
+            android:textColor="@drawable/text_click"
+            android:text="@string/lbl_pesquisar"
+            />
     </LinearLayout>
 
     <LinearLayout
