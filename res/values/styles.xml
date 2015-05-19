@@ -16,7 +16,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    
+
     <style name="BotaoDash">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -24,8 +24,7 @@
         <item name="android:background">@null</item>
         <item name="android:drawableTop">@drawable/about</item>
         <item name="android:padding">@dimen/low_padding</item>
-        
+        <item name="android:layout_gravity">center_vertical</item>
     </style>
-   
 
 </resources>

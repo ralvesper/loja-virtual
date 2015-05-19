@@ -2,57 +2,60 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@drawable/app_background"
+    android:orientation="vertical"
+    android:padding="@dimen/low_padding" >
 
     <LinearLayout
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/low_padding"
-        >
+        android:layout_weight="1"
+        android:background="@drawable/borda_1"
+        android:padding="@dimen/low_padding" >
 
         <Button
             android:id="@+id/btnListar"
-            android:text="@string/lbl_listar" 
-            style="@style/BotaoDash"/>
+            style="@style/BotaoDash"
+            android:text="@string/lbl_listar" />
 
         <Button
+            style="@style/BotaoDash"
             android:drawableTop="@drawable/search"
-            android:text="@string/lbl_pesquisar"
-            style="@style/BotaoDash" />
+            android:text="@string/lbl_pesquisar" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@drawable/borda_1"
         android:padding="@dimen/low_padding" >
 
         <Button
-            android:text="@string/lbl_listar" 
-            style="@style/BotaoDash"/>
+            style="@style/BotaoDash"
+            android:text="@string/lbl_listar" />
 
         <Button
+            style="@style/BotaoDash"
             android:drawableTop="@drawable/search"
-            android:text="@string/lbl_pesquisar"
-            style="@style/BotaoDash" />
+            android:text="@string/lbl_pesquisar" />
     </LinearLayout>
 
-
-     <LinearLayout
-        android:layout_weight="1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/borda_1"
         android:padding="@dimen/low_padding" >
 
         <Button
-            android:text="@string/lbl_listar" 
-            style="@style/BotaoDash"/>
+            style="@style/BotaoDash"
+            android:text="@string/lbl_listar" />
 
         <Button
+            style="@style/BotaoDash"
             android:drawableTop="@drawable/search"
-            android:text="@string/lbl_pesquisar"
-            style="@style/BotaoDash" />
+            android:text="@string/lbl_pesquisar" />
     </LinearLayout>
 
 </LinearLayout>
