@@ -36,24 +36,30 @@ public final class R {
         public static final int text_click=0x7f020008;
     }
     public static final class id {
+        public static final int action_settings=0x7f080007;
         public static final int btnListar=0x7f080000;
-        public static final int btn_logar=0x7f080005;
-        public static final int edt_login=0x7f080002;
-        public static final int edt_senha=0x7f080004;
-        public static final int menuSair=0x7f080006;
-        public static final int menuSobre=0x7f080007;
-        public static final int txt_login=0x7f080001;
-        public static final int txt_senha=0x7f080003;
+        public static final int btn_logar=0x7f080006;
+        public static final int edt_login=0x7f080003;
+        public static final int edt_senha=0x7f080005;
+        public static final int lstDash=0x7f080001;
+        public static final int menuSair=0x7f080008;
+        public static final int menuSobre=0x7f080009;
+        public static final int txt_login=0x7f080002;
+        public static final int txt_senha=0x7f080004;
     }
     public static final class layout {
         public static final int activity_dashboard=0x7f030000;
-        public static final int activity_login=0x7f030001;
+        public static final int activity_dashboard_list=0x7f030001;
+        public static final int activity_login=0x7f030002;
     }
     public static final class menu {
-        public static final int login=0x7f070000;
+        public static final int dash_board_list=0x7f070000;
+        public static final int login=0x7f070001;
     }
     public static final class string {
+        public static final int action_settings=0x7f05000e;
         public static final int app_name=0x7f050000;
+        public static final int hello_world=0x7f05000d;
         /**  Globais 
          */
         public static final int lbl_listar=0x7f05000b;
