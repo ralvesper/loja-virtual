@@ -1,5 +1,8 @@
 package br.optimize.loja_virtual;
 
+//import java.util.ArrayList;
+//import java.util.List;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +15,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class DashBoardListActivity extends Activity {
+	
+	private String[] titulos = new String[]{"Perfil", "Pesquisar"};
+	private Integer[] imgs = new Integer[] {R.drawable.about, R.drawable.search};
 
 	ListView lstDash;
 
@@ -21,15 +27,31 @@ public class DashBoardListActivity extends Activity {
 		setContentView(R.layout.activity_dashboard_list);
 
 		lstDash = (ListView) findViewById(R.id.lstDash);
+		
+		List<ItemDash> listaItems = new ArrayList<ItemDash>();
+		
+		for(int i = 0; i < titulos.length; i++){
+			ItemDash itemDash = new ItemDash(imgs[i], titulos[i]);
+			listaItems.add(itemDash);
+		}
 
-		List<CharSequence> listaStr = new ArrayList<CharSequence>();
+		/*List<CharSequence> listaStr = new ArrayList<CharSequence>();
 		listaStr.add("Consultar");
 		listaStr.add("Pesquisar");
 		listaStr.add("Sobre");
 
 		ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_list_item_1, listaStr);
-
+		*/
+		
+		/*
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter
+				.createFromResource(DashBoardListActivity.this, R.array.array_opcoes_menu,android.R.layout.simple_list_item_1);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		lstDash.setAdapter(adapter);
+		*/
+		
+		AdapterListViewCustom adapterListViewCustom = new AdapterListViewCustom(this, R.layout.item_listview_dash,  listaItems);
+		lstDash.setAdapter(adapterListViewCustom);
 
 	}
 

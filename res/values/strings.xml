@@ -9,6 +9,9 @@
     <string name="lbl_logar">Entrar</string>
     <string name="lbl_sair">Sair</string>
     <string name="lbl_sobre">Sobre</string>
+    <string name="lbl_img">Imagem</string>
+    
+    
     <string name="msg_sobre">Copyright 2015 | Rodrigo A. Pereira\nTodos os direitos reservados!</string>
     <string name="msg_confirma_sair">Deseja realmene sair?</string>
 
@@ -24,5 +27,12 @@
     <string name="lbl_pesquisar">Pesquisar</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <string-array name="array_opcoes_menu">
+        <item>Listar</item>
+        <item>Pesquisar</item>
+        <item>Perfil</item>
+        <item>Sair</item>
+    </string-array>
 
 </resources>
