@@ -6,18 +6,19 @@ package br.optimize.loja_virtual;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.optimize.loja_virtual.custom.AdapterListViewCustom;
+import br.optimize.loja_virtual.custom.ItemDash;
+import br.optimize.loja_virtual.dominio.DashBoardListItem;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
+//import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class DashBoardListActivity extends Activity {
 	
-	private String[] titulos = new String[]{"Perfil", "Pesquisar"};
-	private Integer[] imgs = new Integer[] {R.drawable.about, R.drawable.search};
 
 	ListView lstDash;
 
@@ -30,12 +31,13 @@ public class DashBoardListActivity extends Activity {
 		
 		List<ItemDash> listaItems = new ArrayList<ItemDash>();
 		
-		for(int i = 0; i < titulos.length; i++){
-			ItemDash itemDash = new ItemDash(imgs[i], titulos[i]);
+		for(DashBoardListItem item : DashBoardListItem.values()){
+			ItemDash itemDash = new ItemDash(item.getIdImg(), item.getTitulo());
 			listaItems.add(itemDash);
 		}
 
-		/*List<CharSequence> listaStr = new ArrayList<CharSequence>();
+		/*// Java
+		 * List<CharSequence> listaStr = new ArrayList<CharSequence>();
 		listaStr.add("Consultar");
 		listaStr.add("Pesquisar");
 		listaStr.add("Sobre");
@@ -43,13 +45,14 @@ public class DashBoardListActivity extends Activity {
 		ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this, android.R.layout.simple_list_item_1, listaStr);
 		*/
 		
-		/*
+		/* //XML
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter
 				.createFromResource(DashBoardListActivity.this, R.array.array_opcoes_menu,android.R.layout.simple_list_item_1);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		lstDash.setAdapter(adapter);
 		*/
 		
+		// Customizada
 		AdapterListViewCustom adapterListViewCustom = new AdapterListViewCustom(this, R.layout.item_listview_dash,  listaItems);
 		lstDash.setAdapter(adapterListViewCustom);
 

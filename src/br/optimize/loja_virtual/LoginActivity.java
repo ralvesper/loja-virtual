@@ -1,7 +1,8 @@
 package br.optimize.loja_virtual;
 
+import java.util.ResourceBundle;
+
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -17,6 +18,8 @@ import br.optimize.loja_virtual.bo.LoginBO;
 import br.optimize.loja_virtual.util.MensagemUtil;
 
 public class LoginActivity extends Activity {
+
+	private ResourceBundle config;
 
 	private EditText edtLogin;
 	private EditText edtSenha;
