@@ -2,9 +2,6 @@ package br.optimize.loja_virtual.custom;
 
 import java.util.List;
 
-import br.optimize.loja_virtual.R;
-import br.optimize.loja_virtual.R.id;
-import br.optimize.loja_virtual.R.layout;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import br.optimize.loja_virtual.R;
 
 public class AdapterListViewCustom extends ArrayAdapter<ItemDash> {
 

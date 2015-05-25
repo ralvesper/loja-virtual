@@ -2,21 +2,37 @@ package br.optimize.loja_virtual.bo;
 
 import android.content.Context;
 import br.optimize.loja_virtual.R;
+import br.optimize.loja_virtual.dominio.ValidacaoLogin;
+import br.optimize.loja_virtual.sqlite.LoginOpenHelper;
 
 public class LoginBO {
 	
 	private Context context;
 	
+	private LoginOpenHelper helper;
+	
 	public LoginBO(Context context) {
 		this.context = context;
+		 helper = new LoginOpenHelper(context);
 	}
 	
-	public String validarLogin(String login, String senha){
+	public ValidacaoLogin validarLogin(String login, String senha){
+		
+		ValidacaoLogin retorno = new ValidacaoLogin();
+		
 		if (login == null || "".equals(login)) {
-			return context.getString(R.string.msg_login_obg);
+			retorno.setValido(false);
+			retorno.setMensagem(context.getString(R.string.msg_login_obg));
 		}else if (senha == null || "".equals(senha)) {
-			return context.getString(R.string.msg_senha_obg);
+			retorno.setValido(false);
+			retorno.setMensagem(context.getString(R.string.msg_senha_obg));
+		}else if (helper.valilarLogin(login, senha)){
+			retorno.setValido(true);
+			retorno.setMensagem(context.getString(R.string.msg_login_sucesso));
+		}else {
+			retorno.setValido(false);
+			retorno.setMensagem(context.getString(R.string.msg_login_fail));
 		}
-		return null;
+		return retorno;
 	}
 }

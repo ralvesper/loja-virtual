@@ -1,5 +1,6 @@
 package br.optimize.loja_virtual;
 
+import br.optimize.loja_virtual.util.MensagemUtil;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ public class DashBoardActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dashboard);
+		String msg = getIntent().getExtras().getString("msg");
+		MensagemUtil.addMsg(DashBoardActivity.this, msg);
 	}
 	
 	@Override

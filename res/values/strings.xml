@@ -20,6 +20,7 @@
     <string name="msg_login_obg">Login obrigatório!</string>
     <string name="msg_senha_obg">Senha obrigatória!</string>
     <string name="msg_login_sucesso">Logou com sucesso!</string>
+     <string name="msg_login_fail">Falha no login!</string>
 
     <!-- Globais -->
 

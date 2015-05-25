@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import br.optimize.loja_virtual.bo.LoginBO;
+import br.optimize.loja_virtual.dominio.ValidacaoLogin;
 import br.optimize.loja_virtual.util.MensagemUtil;
 
 public class LoginActivity extends Activity {
@@ -68,7 +69,7 @@ public class LoginActivity extends Activity {
 		return true;
 	}
 
-	private class LoadingAsync extends AsyncTask<Void, Void, String> {
+	private class LoadingAsync extends AsyncTask<Void, Void, ValidacaoLogin> {
 
 		private ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
 
@@ -79,7 +80,7 @@ public class LoginActivity extends Activity {
 		}
 
 		@Override
-		protected String doInBackground(Void... params) {
+		protected ValidacaoLogin doInBackground(Void... params) {
 			String login = edtLogin.getText().toString();
 			String senha = edtSenha.getText().toString();
 
@@ -90,15 +91,16 @@ public class LoginActivity extends Activity {
 		}
 
 		@Override
-		protected void onPostExecute(String msg) {
+		protected void onPostExecute(ValidacaoLogin validacao) {
 
-			if (msg == null) {
+			if (validacao.isValido()) {
 				Intent i = new Intent(LoginActivity.this, DashBoardActivity.class);
+				i.putExtra("msg", validacao.getMensagem());
 				startActivity(i);
 				finish();
-				Log.i("Sucesso", "Logou!");
 			} else {
-				MensagemUtil.addMsg(LoginActivity.this, getString(R.string.msg_login_sucesso));
+				//Log.i("Falha", "Não Logou!");
+				MensagemUtil.addMsg(LoginActivity.this, getString(R.string.msg_login_fail));
 			}
 
 			progressDialog.dismiss();
